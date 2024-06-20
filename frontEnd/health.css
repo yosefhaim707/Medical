@@ -1,0 +1,576 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* Global font settings */
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Heading style */
+h1 {
+    text-align: center;
+}
+body {
+    background-color: #FFF9F4EB;
+}
+/* Search container styles */
+.searchContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 830px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #FFF;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.searchContainer > div {
+    margin: 5px;
+}
+
+#name-container,
+#category-container,
+.submitContainer,
+.logoutContainer {
+    flex: 1;
+    margin: 5px;
+}
+
+#name-container {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+#name-container:hover {
+    transform: scale(1.02);
+}
+
+#name-container label {
+    font-weight: bold;
+    color: #333;
+}
+
+#srchByName {
+    display: block;
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin-top: 4px;
+    background-color: #FFF;
+    color: #333;
+    
+}
+#category-container {
+    display: block;
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+    background-color: #f9f9f9;
+    color: #333;
+    height: 131px;
+    margin-left: 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+#my-appointments {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#my-appointments:hover {
+    background-color: #0056b3;
+}
+
+.submitContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#submit-search {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAf50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#submit-search:hover {
+    background-color: #0a9b0f;
+}
+
+.logoutContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logout {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#logout:hover {
+    background-color: #0a9b0f;
+}
+
+/* Doctor container styles */
+.doctor-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    width: 100%;
+    background-color: #FFF;
+}
+
+/* Style for each doctor card */
+.doctor-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    transition: transform 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.doctor-card:hover {
+    transform: scale(1.02);
+}
+
+.doctor-card img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.doctor-card .doctor-details {
+    flex: 1;
+    text-align: left;
+}
+
+.doctor-card h3 {
+    margin: 0;
+    color: #333;
+}
+
+.doctor-card p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.appointment-button {
+    background-color: #4CAf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.appointment-button:hover {
+    background-color: #0a9b0f;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.popup-content h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.popup-content label {
+    display: block;
+    margin-top: 10px;
+}
+
+.popup-content input,
+.popup-content select,
+.popup-content button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.popup-content button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.popup-content button:hover {
+    background-color: #0a9b0f;
+}
+
+#appointmentTime {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    width: 100%;
+}
+
+
+
+
+
+
+
+.doctor-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    display: flex;
+    
+    justify-content: space-between;
+    align-items: center; /* Center items vertically */
+    gap: 15px; /* Spacing between items */
+}
+
+.doctor-card img {
+    max-width: 100px; /* Adjust as needed */
+    height: auto;
+    border-radius: 50%; /* Make image round */
+}
+
+.doctor-card .doctor-details {
+    flex: 1; /* Take remaining space */
+    text-align: left; /* Align text to the left */
+}
+
+.doctor-card h3 {
+    margin: 0;
+    color: #333;
+}
+
+.doctor-card p {
+    margin: 5px 0;
+    color: #666;}
+
+.doctor-card {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+}
+
+.doctor-card:hover {
+        transform: scale(1.02);
+}
+
+    
+.appointment-button {
+    background-color: #4caf50; /* צבע רקע כחול */
+    color: white; /* צבע טקסט לבן */
+    border: none; /* ללא גבול */
+    padding: 10px 20px; /* ריווח פנימי */
+    font-size: 16px; /* גודל טקסט */
+    border-radius: 10px; /* פינות מעוגלות */
+    cursor: pointer; /* מראה של מצביע */
+    transition: background-color 0.3s ease; /* אפקט מעבר צבע רקע */
+}
+
+.appointment-button:hover {
+    background-color: #0a9b0f; 
+}
+
+.popup-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        width: 80%;
+        max-width: 400px;
+        position: relative;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 0.3s ease-in-out;
+}
+
+    .popup-content h3 {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .popup-content label {
+        display: block;
+        margin-top: 10px;
+    }
+
+    .popup-content input,
+    .popup-content select,
+    .popup-content button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    .popup-content button {
+        background-color: #007bff; /* Blue color */
+        color: white;
+        border: none;
+        cursor: pointer;
+        margin-top: 15px;
+    }
+
+    .popup-content button:hover {
+        background-color: #0056b3;
+
+    }
+
+    #appointmentTime {
+        font-size: 16px; /* גודל גופן */
+        padding: 10px; /* ריווח פנימי */
+        border-radius: 5px; /* פינות מעוגלות */
+        border: 1px solid #ccc; /* גבול */
+        background-color: #f9f9f9; /* צבע רקע */
+        width: 100%; /* רוחב מלא */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* צל קל */
+        margin-top: 10px; /* מרווח עליון */
+        appearance: none; /* הסרת הסגנון המובנה של הדפדפן */
+        -webkit-appearance: none; /* הסרת הסגנון המובנה של הדפדפן */
+        -moz-appearance: none; /* הסרת הסגנון המובנה של הדפדפן */
+    }
+    
+    /* עיצוב לשדה ה-select בעת פוקוס */
+    #appointmentTime:focus {
+        border-color: #007BFF; /* שינוי צבע גבול בעת פוקוס */
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* צל קל בעת פוקוס */
+    }
+    
+    /* עיצוב לאפשרויות בתוך ה-select */
+    #appointmentTime option {
+        font-size: 16px; /* גודל גופן */
+        padding: 10px; /* ריווח פנימי */
+        background-color: #ffffff; /* צבע רקע */
+        color: #333; /* צבע טקסט */
+    }
+
+    .close {
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+        color: #aaa;
+    }
+
+    .close:hover {
+        color: black;
+    }
+
+    .alert-popup {
+        display: none; /* מוסתר כברירת מחדל */
+        position: fixed; /* מיקום קבוע */
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* רקע שקוף כהה */
+        justify-content: center;
+        align-items: center;
+        z-index: 1001; /* שכבת זיהוי גבוהה */
+    }
+
+    .alert-popup-content {
+        background-color: white; /* רקע לבן */
+        padding: 20px; /* ריווח פנימי */
+        border-radius: 10px; /* פינות מעוגלות */
+        width: 300px; /* רוחב הפופאפ */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); /* צל */
+        text-align: center; /* יישור טקסט מרכזי */
+        position: relative; /* מיקום יחסי */
+    }
+
+    .alert-popup-content h2 {
+        font-family: 'Roboto', sans-serif; /* שימוש בפונט Roboto */
+        font-size: 18px; /* גודל גופן */
+        font-weight: 700; /* משקל גופן */
+        color: #333; /* צבע טקסט */
+    }
+
+    .alert-popup-content button {
+        background-color: #0a9b0f; /* צבע רקע כחול */
+        color: white; /* צבע טקסט לבן */
+        border: none; /* ללא גבול */
+        padding: 10px 20px; /* ריווח פנימי */
+        font-size: 16px; /* גודל טקסט */
+        border-radius: 10px; /* פינות מעוגלות */
+        cursor: pointer; /* מראה של מצביע */
+        transition: background-color 0.3s ease; /* אפקט מעבר צבע רקע */
+        margin-top: 10px; /* מרווח עליון */
+    }
+
+    .alert-popup-content button:hover {
+        background-color: #0a9b0f; /* שינוי צבע רקע בעת מעבר עכבר */
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: scale(0.9); }
+        to { opacity: 1; transform: scale(1); }
+    }
+
+    #search-and-filter {
+        margin: 20px;
+    }
+
+    #search-and-filter input,
+    #search-and-filter button {
+        padding: 10px;
+        margin-right: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    #search-and-filter button {
+        background-color: #007bff; /* Blue color */
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    #search-and-filter button:hover {
+        background-color: #0056b3;
+    }
+
+    #category-container {
+        margin-top: 10px;
+    }
+
+    #category-container label {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .popup {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+    
+    .popup-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        width: 300px;
+        text-align: center;
+    }
+    
+    .close, .close-error {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+
+    /* body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #FFF9F4EB;
+        color: #333;
+        text-align: center;
+        font-size: 1.2em;
+        line-height: 1.5; */
+    /* } */
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px;
+        height: 20vh;
+    }
+    .header-button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1.1em;
+        font-weight: bold;
+    
+    }
+    /* .header-button:hover {
+        background-color: #3e8e41;
+    } */
+    
+    .ref-link {
+        width: 33.3%;
+        background-color: #4CAF50;
+        color: white;
+        text-decoration: none;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 3px;
+        border-radius: 5px;
+    }
+    
+    

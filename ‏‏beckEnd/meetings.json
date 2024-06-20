@@ -1,0 +1,73 @@
+[
+    {
+      "date": "17/09/2024",
+      "time": "13:00",
+      "doctor": "Dr. Smith",
+      "address": "Main St. 123",
+      "user_id": "66702c60a9ed6e56484f54bb"
+    },
+    {
+      "date": "18/09/2024",
+      "time": "14:30",
+      "doctor": "Dr. Johnson",
+      "address": "Broadway Ave. 456",
+      "user_id": "66702c60a9ed6e56484f54bb"
+    },
+    {
+      "date": "19/09/2024",
+      "time": "16:00",
+      "doctor": "Dr. Brown",
+      "address": "Oak St. 789",
+      "user_id": "66702c60a9ed6e56484f54bc"
+    },
+    {
+      "date": "20/09/2024",
+      "time": "15:15",
+      "doctor": "Dr. Clark",
+      "address": "Pine St. 321",
+      "user_id": "66702c60a9ed6e56484f54bc"
+    },
+    {
+      "date": "21/09/2024",
+      "time": "10:45",
+      "doctor": "Dr. Taylor",
+      "address": "Maple Ave. 654",
+      "user_id": "66702c60a9ed6e56484f54bd"
+    },
+    {
+      "date": "22/09/2024",
+      "time": "11:30",
+      "doctor": "Dr. White",
+      "address": "Cedar St. 987",
+      "user_id": "66702c60a9ed6e56484f54bd"
+    },
+    {
+      "date": "23/09/2024",
+      "time": "13:30",
+      "doctor": "Dr. Green",
+      "address": "Elm St. 567",
+      "user_id": "66702c60a9ed6e56484f54be"
+    },
+    {
+      "date": "24/09/2024",
+      "time": "16:30",
+      "doctor": "Dr. Blue",
+      "address": "Spruce Ave. 432",
+      "user_id": "66702c60a9ed6e56484f54be"
+    },
+    {
+      "date": "25/09/2024",
+      "time": "14:00",
+      "doctor": "Dr. Black",
+      "address": "Sycamore St. 876",
+      "user_id": "66702c60a9ed6e56484f54bf"
+    },
+    {
+      "date": "26/09/2024",
+      "time": "12:00",
+      "doctor": "Dr. Parker",
+      "address": "Juniper Ave. 543",
+      "user_id": "66702c60a9ed6e56484f54bf"
+    }
+  ]
+  

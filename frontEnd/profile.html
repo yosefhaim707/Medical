@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mental Health Profile</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="profile.css">
+    </head>
+    <body>
+
+        <div class="header">
+            <a style="display: none" class="ref-link" id="login-link" href="login.html">
+                <div class="header-button" id="login-button">Login</div>
+            </a>
+            <a  class="ref-link" id="logout-link" href="">
+                <div class="header-button" id="login-button">Log Out</div>
+            </a>
+            <a class="ref-link" id="find-link" href="search.html">
+                <div class="header-button" id="find-button">Find a therapist</div>
+            </a>
+            <a style="display: none" class="ref-link" id="profile-link" href="profile.html">
+                <div class="header-button" id="profile-button">Profile</div>
+            </a>
+            <a  class="ref-link" id="home-link" href="index.html">
+                <div class="header-button" id="profile-button">To home-page</div>
+            </a>
+        </div>
+
+
+
+        <div class="header">
+            <h1>Mental Health</h1>
+        </div>
+        <div class="profile-container">
+            <h2>My Profile</h2>
+            <div class="info-container">
+                <div class="info">
+                    <p>Username:</p>
+                    <p id="username">Shahar</p>
+                </div>
+                <div class="edit-btn">
+                    <button id="edit-username-btn">Edit</button>
+                </div>
+            </div>
+
+            <div class="info-container">
+                <div class="info">
+                    <p>Password:</p>
+                    <p id="password">**********</p>
+                </div>
+                <div class="edit-btn">
+                    <button id="edit-password-btn">Edit</button>
+                </div>
+            </div>
+
+            <div class="info-container">
+                <div class="info">
+                    <p>Birth Date:</p>
+                    <p id="birth-date">12/12/2000</p>
+                </div>
+                <div class="edit-btn">
+                    <button id="edit-birth-date-btn">Edit</button>
+                </div>
+            </div>
+
+            <div class="info-container">
+                <div class="info">
+                    <p>Phone Number:</p>
+                    <p id="phone-number">0541234567</p>
+                </div>
+                <div class="edit-btn">
+                    <button id="edit-phone-number-btn">Edit</button>
+                </div>
+            </div>
+
+            <div class="info-container">
+                <div class="info">
+                    <p>Address:</p>
+                    <p id="address">New York</p>
+                </div>
+                <div class="edit-btn">
+                    <button id="edit-address-btn">Edit</button>
+                </div>
+            </div>
+        </div>
+        <div class="appointments-container">
+            <div class="appointments-header">
+                <h2>My Appointments</h2>
+                <button id="make-appointment-btn">New appointment</button>
+            </div>
+            <div class="appointments-list">
+                
+            </div>
+        </div>
+
+        <script src="profile.js"></script>
+    </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health</title>
+    <link rel="stylesheet" href="health.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <a style="display: none" class="ref-link" id="login-link" href="login.html">
+            <div class="header-button" class="login-button">Login</div>
+        </a>
+        <a  class="ref-link" id="logout-link">
+            <div class="header-button" class="logout-link">Log Out</div>
+        </a>
+        <a style="display: none" class="ref-link" id="find-link" href="search.html">
+            <div class="header-button" id="find-button">Find a therapist</div>
+        </a>
+        <a  class="ref-link" id="home-link" href="index.html">
+            <div class="header-button" id="profile-button">To home-page</div>
+        </a>
+        <a  class="ref-link" id="profile-link" href="profile.html">
+            <div class="header-button" id="profile-button">Profile</div>
+        </a>
+
+    </div>
+    <h1>Mental Health</h1>
+    
+    
+        
+            <div class="searchContainer">
+                <div id="name-container">
+                        <label for="srchByName"><h3>Search by name:</h3></label><br>
+                        <input type="text" id="srchByName" name="srchByName" placeholder="Name of  Doctor">
+                </div>
+                
+                <div id="category-container" class="dropdown-content">
+                    <h3>Search By Category:</h3>
+                    <label><input type="checkbox" value="Psychologist"> Psychologist</label><br>
+                    <label><input type="checkbox" value="Psychiatrist"> Psychiatrist</label><br>
+                    <label><input type="checkbox" value="Emotional Therapist">Emotional Therapist</label>
+                </div>
+                <div class="submitContainer">
+                    <button id="submit-search">Submit Search</button>
+                </div>
+
+            </div>
+
+            <div id="doctors-list" class = "doctor-container"><h2>List Of Doctors</h2></div>
+
+
+
+            <!-- Appointment Popup -->
+    <div id="appointmentPopup" style="display: none;" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2>Make an Appointment</h2>
+            <form id="appointmentForm">
+                <label for="appointmentDate">Date:</label>
+                <input type="date" id="appointmentDate" required><br>
+                <label for="appointmentTime">Time:</label>
+                <select id="appointmentTime" required></select><br>
+                <button type="submit">Confirm Appointment</button>
+            </form>
+        </div>
+    </div>
+    
+
+      <!-- Custom Alert Popup -->
+      <div id="customAlert" class="alert-popup">
+        <div class="alert-popup-content">
+            <h2 id="alertMessage"></h2>
+            <button id="closeAlert">OK</button>
+        </div>
+    </div>
+
+
+
+            <script src="search.js"></script>
+            
+               
+        
+               
+            
+    
+</body>
+</html>
